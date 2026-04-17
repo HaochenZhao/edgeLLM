@@ -1,0 +1,1242 @@
+[
+    {
+        "index": 1,
+        "command": "Turn on the living room light",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    1,
+                    0,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Turning on the living room light."
+        },
+        "latency_total": 3.2098605632781982,
+        "prompt_ms": 1748.557,
+        "predicted_per_second": 29.269904057435912,
+        "temp_range": [
+            49.6,
+            60.05
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 2,
+        "command": "Dim the bedroom lights to 50%",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Dimming the bedroom lights to 50%."
+        },
+        "latency_total": 1.7526140213012695,
+        "prompt_ms": 173.57,
+        "predicted_per_second": 29.218463273979623,
+        "temp_range": [
+            59.5,
+            60.6
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 3,
+        "command": "Make the kitchen light red",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    1,
+                    0,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the kitchen LED to red."
+        },
+        "latency_total": 1.5685653686523438,
+        "prompt_ms": 130.809,
+        "predicted_per_second": 29.307975886513933,
+        "temp_range": [
+            60.6,
+            61.7
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 4,
+        "command": "Set the hallway light to blue",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the hallway light to blue."
+        },
+        "latency_total": 1.5793285369873047,
+        "prompt_ms": 142.679,
+        "predicted_per_second": 29.328994504305076,
+        "temp_range": [
+            61.7,
+            61.15
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 5,
+        "command": "Turn off all lights in the house",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.0
+            },
+            "explanation": "Turning off all lights in the house."
+        },
+        "latency_total": 1.6214487552642822,
+        "prompt_ms": 149.888,
+        "predicted_per_second": 29.314777306544624,
+        "temp_range": [
+            61.7,
+            62.8
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 6,
+        "command": "Set the study light to bright white",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the study light to bright white."
+        },
+        "latency_total": 1.8303241729736328,
+        "prompt_ms": 149.373,
+        "predicted_per_second": 29.229492677415568,
+        "temp_range": [
+            62.8,
+            63.35
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 7,
+        "command": "Change the lounge light to a warm orange",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    165,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Changing lounge light to warm orange."
+        },
+        "latency_total": 1.7377049922943115,
+        "prompt_ms": 161.499,
+        "predicted_per_second": 29.269199003829176,
+        "temp_range": [
+            62.8,
+            64.45
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 8,
+        "command": "Make the nursery light a soft pink",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Setting the nursery light to soft pink."
+        },
+        "latency_total": 1.902719497680664,
+        "prompt_ms": 149.274,
+        "predicted_per_second": 29.163104669813613,
+        "temp_range": [
+            64.45,
+            63.9
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 9,
+        "command": "Increase the bathroom light brightness",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Increasing the brightness of the bathroom light."
+        },
+        "latency_total": 1.6047136783599854,
+        "prompt_ms": 130.565,
+        "predicted_per_second": 29.26117572765059,
+        "temp_range": [
+            63.9,
+            65.0
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 10,
+        "command": "Set the dining room to a romantic purple",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    16,
+                    16,
+                    211
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the dining room to a romantic purple."
+        },
+        "latency_total": 1.8791635036468506,
+        "prompt_ms": 161.667,
+        "predicted_per_second": 29.18993834501223,
+        "temp_range": [
+            64.45,
+            63.9
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 11,
+        "command": "Make the garage light green",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the garage light to green."
+        },
+        "latency_total": 1.6387078762054443,
+        "prompt_ms": 130.932,
+        "predicted_per_second": 29.271083495765673,
+        "temp_range": [
+            63.9,
+            63.9
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 12,
+        "command": "Turn the porch light on",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Turning porch light on."
+        },
+        "latency_total": 1.497603416442871,
+        "prompt_ms": 130.358,
+        "predicted_per_second": 29.354588012026575,
+        "temp_range": [
+            63.9,
+            65.55
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 13,
+        "command": "Set the balcony light to a cool cyan",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Setting balcony light to cool cyan."
+        },
+        "latency_total": 1.5984344482421875,
+        "prompt_ms": 161.296,
+        "predicted_per_second": 29.317325143096472,
+        "temp_range": [
+            65.55,
+            65.55
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 14,
+        "command": "Make the basement light yellow",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting the basement light to yellow."
+        },
+        "latency_total": 1.9196696281433105,
+        "prompt_ms": 130.763,
+        "predicted_per_second": 29.142672999593685,
+        "temp_range": [
+            65.55,
+            65.55
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 15,
+        "command": "Turn off the kitchen lights",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.0
+            },
+            "explanation": "Turning off kitchen lights."
+        },
+        "latency_total": 1.4989900588989258,
+        "prompt_ms": 130.558,
+        "predicted_per_second": 29.328114884091626,
+        "temp_range": [
+            65.55,
+            65.55
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 16,
+        "command": "Set the intensity of the living room lamp to low",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.1
+            },
+            "explanation": "Setting the living room lamp to low brightness."
+        },
+        "latency_total": 1.694847822189331,
+        "prompt_ms": 185.746,
+        "predicted_per_second": 29.258003726405743,
+        "temp_range": [
+            65.55,
+            66.65
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: False",
+        "passed": false
+    },
+    {
+        "index": 17,
+        "command": "Make the bedroom light dark blue",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.0
+            },
+            "explanation": "Setting LED to dark blue."
+        },
+        "latency_total": 1.6141612529754639,
+        "prompt_ms": 142.506,
+        "predicted_per_second": 29.309602098294864,
+        "temp_range": [
+            66.1,
+            65.55
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 18,
+        "command": "Switch the attic light to green",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Switching attic light to green."
+        },
+        "latency_total": 1.5809414386749268,
+        "prompt_ms": 142.808,
+        "predicted_per_second": 29.29812164161561,
+        "temp_range": [
+            63.35,
+            66.65
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 19,
+        "command": "Set the entrance light to maximum brightness",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    1,
+                    0,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting entrance light to maximum brightness."
+        },
+        "latency_total": 1.5884382724761963,
+        "prompt_ms": 149.632,
+        "predicted_per_second": 29.28433274253354,
+        "temp_range": [
+            67.75,
+            66.65
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 20,
+        "command": "Turn on the stairs light",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Turning on the stairs light."
+        },
+        "latency_total": 1.5312142372131348,
+        "prompt_ms": 130.656,
+        "predicted_per_second": 29.372425882981688,
+        "temp_range": [
+            66.65,
+            67.2
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 21,
+        "command": "Sound the security alarm",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.5
+            },
+            "explanation": "Beeping the security alarm."
+        },
+        "latency_total": 1.170555830001831,
+        "prompt_ms": 118.5,
+        "predicted_per_second": 29.593707041393003,
+        "temp_range": [
+            67.2,
+            67.2
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 22,
+        "command": "Someone is at the front door, chime please",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Chiming the doorbell."
+        },
+        "latency_total": 1.2385058403015137,
+        "prompt_ms": 185.456,
+        "predicted_per_second": 29.568048957058608,
+        "temp_range": [
+            67.2,
+            67.2
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 23,
+        "command": "Alert: smoke detected in the kitchen",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Setting LED to white to alert the kitchen."
+        },
+        "latency_total": 1.6580579280853271,
+        "prompt_ms": 149.432,
+        "predicted_per_second": 29.25471615944086,
+        "temp_range": [
+            67.75,
+            67.2
+        ],
+        "ram_peak": 11.7,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: False",
+        "passed": false
+    },
+    {
+        "index": 24,
+        "command": "Set a timer for 5 minutes and beep when done",
+        "intent": null,
+        "latency_total": 2.858428478240967,
+        "prompt_ms": 191.955,
+        "predicted_per_second": 28.926586952005533,
+        "temp_range": [
+            67.2,
+            68.3
+        ],
+        "ram_peak": 11.7,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Invalid JSON",
+        "passed": false
+    },
+    {
+        "index": 25,
+        "command": "Activate the panic button",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Beeping the buzzer to activate the panic button."
+        },
+        "latency_total": 1.3464910984039307,
+        "prompt_ms": 118.988,
+        "predicted_per_second": 29.435982053862944,
+        "temp_range": [
+            67.75,
+            67.2
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 26,
+        "command": "Sound the siren for a second",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Beeping buzzer."
+        },
+        "latency_total": 1.1689691543579102,
+        "prompt_ms": 149.427,
+        "predicted_per_second": 29.55662112648165,
+        "temp_range": [
+            67.75,
+            68.3
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 27,
+        "command": "High priority alert: water leak in basement",
+        "intent": null,
+        "latency_total": 0.20157742500305176,
+        "prompt_ms": 161.791,
+        "predicted_per_second": 56.77463309393364,
+        "temp_range": [
+            67.75,
+            67.75
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Invalid JSON",
+        "passed": false
+    },
+    {
+        "index": 28,
+        "command": "Low battery warning beep",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.3
+            },
+            "explanation": "Beeping buzzer to alert about low battery."
+        },
+        "latency_total": 1.310354471206665,
+        "prompt_ms": 118.901,
+        "predicted_per_second": 29.489304229356012,
+        "temp_range": [
+            67.75,
+            67.75
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 29,
+        "command": "Double beep for confirmation",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Double beeping buzzer."
+        },
+        "latency_total": 1.1702520847320557,
+        "prompt_ms": 118.373,
+        "predicted_per_second": 29.59930183840309,
+        "temp_range": [
+            67.75,
+            68.3
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 30,
+        "command": "System arming notification sound",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.5
+            },
+            "explanation": "System arming notification sound."
+        },
+        "latency_total": 1.183016061782837,
+        "prompt_ms": 130.875,
+        "predicted_per_second": 29.591983817957754,
+        "temp_range": [
+            68.3,
+            66.65
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 31,
+        "command": "Doorbell ringing",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Beeping buzzer to indicate the doorbell is ringing."
+        },
+        "latency_total": 1.3681268692016602,
+        "prompt_ms": 106.536,
+        "predicted_per_second": 29.433945453330495,
+        "temp_range": [
+            67.75,
+            68.3
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 32,
+        "command": "Emergency broadcast signal",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 2.0
+            },
+            "explanation": "Beeping emergency broadcast signal."
+        },
+        "latency_total": 1.159968376159668,
+        "prompt_ms": 106.564,
+        "predicted_per_second": 29.556575098490136,
+        "temp_range": [
+            67.75,
+            68.3
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 33,
+        "command": "Wake up alarm for 7 AM (beep)",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.2
+            },
+            "explanation": "Beeping alarm for 7 AM."
+        },
+        "latency_total": 1.3142485618591309,
+        "prompt_ms": 192.046,
+        "predicted_per_second": 29.526132416651308,
+        "temp_range": [
+            68.3,
+            68.3
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 34,
+        "command": "Reminder to take medicine (chirp)",
+        "intent": {
+            "action": "beep",
+            "params": {
+                "duration": 0.5
+            },
+            "explanation": "Chirping to remind to take medicine."
+        },
+        "latency_total": 1.3323299884796143,
+        "prompt_ms": 173.533,
+        "predicted_per_second": 29.457326730271387,
+        "temp_range": [
+            68.85,
+            68.3
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: False",
+        "passed": false
+    },
+    {
+        "index": 35,
+        "command": "Intruder detected in the garden!",
+        "intent": null,
+        "latency_total": 0.20166325569152832,
+        "prompt_ms": 161.66,
+        "predicted_per_second": 56.56748500961647,
+        "temp_range": [
+            68.3,
+            68.85
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Invalid JSON",
+        "passed": false
+    },
+    {
+        "index": 36,
+        "command": "Party mode: set lights to colorful and beep once",
+        "intent": null,
+        "latency_total": 2.8526880741119385,
+        "prompt_ms": 185.319,
+        "predicted_per_second": 28.917038144202134,
+        "temp_range": [
+            68.85,
+            68.85
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Invalid JSON",
+        "passed": false
+    },
+    {
+        "index": 37,
+        "command": "Movie time: dim the lights to 10%",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.1
+            },
+            "explanation": "Dimming the lights to 10%."
+        },
+        "latency_total": 1.7350783348083496,
+        "prompt_ms": 191.722,
+        "predicted_per_second": 29.243357371373094,
+        "temp_range": [
+            68.85,
+            70.5
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 38,
+        "command": "Good morning: turn on the lights moderately",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Turning on the lights moderately."
+        },
+        "latency_total": 1.5634677410125732,
+        "prompt_ms": 161.252,
+        "predicted_per_second": 29.335164992415784,
+        "temp_range": [
+            70.5,
+            68.3
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 39,
+        "command": "Good night: turn off all hardware",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    0
+                ],
+                "brightness": 0.0
+            },
+            "explanation": "Turning off all hardware."
+        },
+        "latency_total": 1.5105571746826172,
+        "prompt_ms": 142.636,
+        "predicted_per_second": 29.33889207541856,
+        "temp_range": [
+            68.3,
+            68.85
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 40,
+        "command": "Gaming mode: set lights to neon blue",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to neon blue."
+        },
+        "latency_total": 1.5779926776885986,
+        "prompt_ms": 173.332,
+        "predicted_per_second": 29.28406182793971,
+        "temp_range": [
+            68.85,
+            68.85
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 41,
+        "command": "Relaxing session: soft green light",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Relaxing session with soft green light."
+        },
+        "latency_total": 1.6676740646362305,
+        "prompt_ms": 162.052,
+        "predicted_per_second": 29.312365221411614,
+        "temp_range": [
+            68.85,
+            69.4
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 42,
+        "command": "Reading mode: neutral white light",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    255,
+                    255
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to neutral white light."
+        },
+        "latency_total": 1.7933604717254639,
+        "prompt_ms": 142.579,
+        "predicted_per_second": 29.15822040091338,
+        "temp_range": [
+            69.4,
+            69.4
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 43,
+        "command": "Romantic dinner: dim red lighting",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Dimming the red lighting."
+        },
+        "latency_total": 1.5499835014343262,
+        "prompt_ms": 149.522,
+        "predicted_per_second": 29.37198399871623,
+        "temp_range": [
+            69.4,
+            68.85
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 44,
+        "command": "Study time: focused bright light",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    1,
+                    0,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to red."
+        },
+        "latency_total": 1.510869026184082,
+        "prompt_ms": 142.806,
+        "predicted_per_second": 29.33654666307783,
+        "temp_range": [
+            68.85,
+            69.4
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 45,
+        "command": "Christmas theme: alternate red and green light",
+        "intent": null,
+        "latency_total": 0.201430082321167,
+        "prompt_ms": 161.343,
+        "predicted_per_second": 56.37614161686774,
+        "temp_range": [
+            69.4,
+            69.4
+        ],
+        "ram_peak": 11.5,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Invalid JSON",
+        "passed": false
+    },
+    {
+        "index": 46,
+        "command": "Ocean vibes: set light to deep sea blue",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to deep sea blue."
+        },
+        "latency_total": 1.6110084056854248,
+        "prompt_ms": 173.4,
+        "predicted_per_second": 29.308221304983444,
+        "temp_range": [
+            67.75,
+            70.5
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 47,
+        "command": "Fireplace simulation: orange and red flickering lights",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Setting the orange light to 50% brightness."
+        },
+        "latency_total": 1.8334124088287354,
+        "prompt_ms": 185.444,
+        "predicted_per_second": 29.208237696638374,
+        "temp_range": [
+            69.4,
+            69.95
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    },
+    {
+        "index": 48,
+        "command": "Forest escape: deep forest green",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    1,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to deep forest green."
+        },
+        "latency_total": 1.5799379348754883,
+        "prompt_ms": 142.499,
+        "predicted_per_second": 29.312619082515027,
+        "temp_range": [
+            69.4,
+            69.4
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 49,
+        "command": "Flash the lights for an incoming call",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    0,
+                    0,
+                    1
+                ],
+                "brightness": 0.5
+            },
+            "explanation": "Flashing red LED for a call."
+        },
+        "latency_total": 1.6220715045928955,
+        "prompt_ms": 149.43,
+        "predicted_per_second": 29.290655259205266,
+        "temp_range": [
+            69.4,
+            69.95
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: OK | Accurate: True",
+        "passed": true
+    },
+    {
+        "index": 50,
+        "command": "Signal a SOS using red lights and short beeps",
+        "intent": {
+            "action": "set_led",
+            "params": {
+                "color": [
+                    255,
+                    0,
+                    0
+                ],
+                "brightness": 1.0
+            },
+            "explanation": "Setting LED to red."
+        },
+        "latency_total": 1.6214587688446045,
+        "prompt_ms": 185.622,
+        "predicted_per_second": 29.34665951167159,
+        "temp_range": [
+            69.4,
+            69.95
+        ],
+        "ram_peak": 11.6,
+        "throttled": "throttled=0x0",
+        "accuracy_check": "Legal: Color values out of range | Accurate: True",
+        "passed": false
+    }
+]
