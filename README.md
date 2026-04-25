@@ -1,99 +1,103 @@
-# Edge LLM Hardware Controller / 边缘大模型硬件控制器
+# Edge LLM Hardware Controller
 
-[English](#english) | [中文](#chinese)
-
----
-
-<a name="english"></a>
-## English
-
-### Project Overview
 A Raspberry Pi 5 based middleware that enables natural language control of physical hardware (RGB LED, Buzzer) using a local Large Language Model (**Qwen2.5-0.5B-Instruct**).
 
-### Features
-- **Local Inference**: Runs entirely on-device using `llama.cpp` and `llama-server`.
-- **Natural Language Intent**: Maps human commands (e.g., "Make the light red") to structured JSON actions.
-- **Hardware Control**: Direct GPIO interaction via `gpiozero`.
-- **Debugging Tool**: Includes `test_hardware.py` to verify your breadboard connections.
-- **Benchmarking Suite**: Specialized `benchmark.py` to evaluate performance, accuracy, and resource usage.
+---
 
-### Benchmarking (Evaluation)
-The benchmarking suite evaluates:
-- **TTFT (Time To First Token)**: Prompt processing latency.
-- **Throughput**: Generation speed (Tokens Per Second).
-- **Resource Usage**: RAM utilization and CPU Thermal range.
-- **Accuracy**: Capability to map various commands to valid hardware actions.
+## 1. Configuration & Running Guide
 
-To run the benchmark:
-1. Ensure `llama-server` is running.
-2. Run the script:
+### Hardware Requirements
+- **Raspberry Pi 5** (8GB recommended)
+- **Active Cooler** (Essential for thermal management during inference)
+- **64GB+ MicroSD Card**
+- **RGB LED** (Common Cathode or Anode)
+- **Passive Buzzer**
+- **Resistors** (220Ω for RGB channels)
+- **Solderless Breadboard** and jumper wires
+
+### OS Installation & Connectivity
+1. **Physical Setup**: Attach the **Official Active Cooler** to the Raspberry Pi 5. This is critical to maintain performance during continuous LLM inference.
+2. **Flash OS**: Use **Raspberry Pi Imager** to write **Raspberry Pi OS Lite (64-bit)** onto the microSD card. 
+3. **Initial Configuration**: 
+   - In the Imager's "OS Customization" settings, enable **SSH** and configure your **WiFi** credentials.
+   - Insert the flashed microSD card into the Pi and power it up.
+4. **Access**: Connect to the device via SSH from your computer:
    ```bash
-   python3 ~/edgeLLM/benchmark.py
+   ssh <username>@<hostname>.local
    ```
-   *Note: Results will be saved to `benchmark_log.json`.*
 
 ### Breadboard Wiring Diagram
-| Component | Device Pin | Pi GPIO | Physical Pin | Resistor |
-| :--- | :--- | :--- | :--- | :--- |
-| **RGB LED** | Red (Anode/Cathode) | GPIO 17 | Pin 11 | 220Ω |
-| **RGB LED** | Green (Anode/Cathode) | GPIO 27 | Pin 13 | 220Ω |
-| **RGB LED** | Blue (Anode/Cathode) | GPIO 22 | Pin 15 | 220Ω |
-| **RGB LED** | Common | GND | Pin 6/9 | None |
-| **Buzzer** | Positive (+) | GPIO 23 | Pin 16 | None |
-| **Buzzer** | Negative (-) | GND | Pin 14/20 | None |
+| Component   | Device Pin   | Pi GPIO | Physical Pin | Resistor |
+| :---------- | :----------- | :------ | :----------- | :------- |
+| **RGB LED** | Red (R)      | GPIO 17 | Pin 11       | 220Ω     |
+| **RGB LED** | Green (G)    | GPIO 27 | Pin 13       | 220Ω     |
+| **RGB LED** | Blue (B)     | GPIO 22 | Pin 15       | 220Ω     |
+| **RGB LED** | Common       | GND     | Pin 6/9      | None     |
+| **Buzzer**  | Positive (+) | GPIO 23 | Pin 16       | None     |
+| **Buzzer**  | Negative (-) | GND     | Pin 14/20    | None     |
 
-### Usage
-1. **Verify Wiring**: `python3 ~/edgeLLM/test_hardware.py`
-2. **Start LLM Server**:
+### Software Setup
+1. **Initialize Environment**:
+   ```bash
+   pip install gpiozero requests
+   ```
+2. **Setup Inference Engine**:
+   Install `llama.cpp` and ensure `llama-server` is built.
+3. **Download Model**:
+   Place `qwen2.5-0.5b-instruct-q4_k_m.gguf` in your desired directory.
+
+### Running the System
+1. **Verify Connections**:
+   ```bash
+   python3 test_hardware.py
+   ```
+2. **Start Local LLM Server**:
    ```bash
    ~/llama.cpp/build/bin/llama-server -m ~/llama.cpp/qwen2.5-0.5b-instruct-q4_k_m.gguf --port 8080 &
    ```
-3. **Run Controller**: `python3 ~/edgeLLM/main.py`
+3. **Run Application**:
+   ```bash
+   python3 main.py
+   ```
 
 ---
 
-<a name="chinese"></a>
-## 中文
+## 2. System Design and Implementation
 
-### 项目简介
-基于树莓派 5 的中间件，可通过本地大语言模型 (**Qwen2.5-0.5B-Instruct**) 实现对物理硬件（RGB LED、蜂鸣器）的自然语言控制。
+### Project Architecture
+The system is designed as a modular pipeline that bridges high-level natural language understanding with low-level electronic control:
 
-### 功能特性
-- **本地推理**: 使用 `llama.cpp` 和 `llama-server` 完全在设备端运行。
-- **自然语言意图解析**: 将人类指令映射为结构化的 JSON 动作。
-- **硬件控制**: 通过 `gpiozero` 直接进行 GPIO 交互。
-- **调试工具**: 包含 `test_hardware.py` 脚本，用于验证面包板线路连接。
-- **基准测试**: 提供 `benchmark.py` 脚本，用于评估性能、准确率和资源占用。
+- **Local Inference Engine (`llama.cpp`)**: Runs completely offline on the Raspberry Pi 5 CPU. It utilizes ARM NEON acceleration and 4-bit quantization (GGUF) to maintain interactive speeds without a dedicated GPU.
+- **Middleware Controller (Python)**: Acts as the "Brain." It manages the communication between the user and the LLM. It wraps user inputs into a structured System Prompt that defines the hardware's capabilities and constraints.
+- **Structured Intent Extraction**: The system uses **JSON Prompting** to force the LLM to output precise commands. This eliminates the need for secondary NLU parsers, as the LLM directly "reasons" about which hardware function to call.
+- **Hardware Abstraction Layer (`gpiozero`)**: Provides a clean Python interface to the Raspberry Pi's GPIO pins, handling PWM for LED color mixing and digital output for the buzzer.
 
-### 基准测试 (性能评估)
-测试指标包括:
-- **TTFT (首字延迟)**: Prompt 处理延迟。
-- **吞吐量**: 生成速度 (每秒 Token 数)。
-- **资源占用**: RAM 使用情况及 CPU 温度范围。
-- **准确率**: 将各种指令转换为有效硬件动作的能力。
+### Implementation Details
+- **Quantization Strategy**: Q4_K_M was selected to balance inference speed (Tokens/s) with the accuracy of JSON generation.
+- **Prompt Engineering**: Uses the ChatML format with a strict role definition to minimize hallucinations and ensure output valid for `json.loads()`.
+- **System Robustness**: Includes a regex-based JSON extractor in `llm_interface.py` to handle potential verbose text generated by the model before/after the JSON block.
 
-运行测试:
-1. 确保 `llama-server` 已启动。
-2. 运行脚本:
-   ```bash
-   python3 ~/edgeLLM/benchmark.py
-   ```
-   *注: 测试结果将保存至 `benchmark_log.json`。*
+---
 
-### 面包板接线图
-| 元件 | 引脚类型 | 树莓派 GPIO | 物理引脚 | 电阻 |
-| :--- | :--- | :--- | :--- | :--- |
-| **RGB LED** | 红灯 (R) | GPIO 17 | Pin 11 | 220Ω |
-| **RGB LED** | 绿灯 (G) | GPIO 27 | Pin 13 | 220Ω |
-| **RGB LED** | 蓝灯 (B) | GPIO 22 | Pin 15 | 220Ω |
-| **RGB LED** | 公共端 | GND | Pin 6/9 | 无 |
-| **蜂鸣器** | 正极 (+) | GPIO 23 | Pin 16 | 无 |
-| **蜂鸣器** | 负极 (-) | GND | Pin 14/20 | 无 |
+## 3. Benchmark Results
 
-### 使用方法
-1. **验证线路**: `python3 ~/edgeLLM/test_hardware.py`
-2. **启动 LLM 服务器**:
-   ```bash
-   ~/llama.cpp/build/bin/llama-server -m ~/llama.cpp/qwen2.5-0.5b-instruct-q4_k_m.gguf --port 8080 &
-   ```
-3. **运行控制器**: `python3 ~/edgeLLM/main.py`
+The system's performance was evaluated through a specialized benchmarking suite (`benchmark.py`) that measures latency, throughput, and hardware resource utilization.
+
+### Evaluation Metrics
+- **TTFT (Time To First Token)**: Average latency for the model to begin generating a response (Prompt processing).
+- **Throughput**: Generation speed measured in Tokens Per Second.
+- **Resource Footprint**: RAM usage and CPU temperature during peak inference.
+- **Mapping Accuracy**: The percentage of successful intent-to-JSON mappings for various command types.
+
+### Performance Summary
+The following chart summarizes the benchmark results for the Qwen-0.5B model on the Raspberry Pi 5:
+
+![Benchmark Summary](benchmark_summary.png)
+
+*Detailed performance logs are available in `benchmark_log.json`.*
+
+---
+
+## 4. Statement of Work
+
+All architecture design, hardware setup, implementation, and performance evaluation were performed independently by **Haochen Zhao** with the assistance of AI tools. 
