@@ -62,7 +62,17 @@ A Raspberry Pi 5 based middleware that enables natural language control of physi
 
 ---
 
-## 2. System Design and Implementation
+## 2. Project Demonstration Video
+
+The following demonstration shows the end-to-end pipeline: from natural language input and local LLM reasoning to physical hardware execution.
+
+![Project Demo](eval_demo.gif)
+
+*Note: The original video has been compressed into GIF format for seamless display within the GitHub README.*
+
+---
+
+## 3. System Design and Implementation
 
 ### Project Architecture
 The system is designed as a modular pipeline that bridges high-level natural language understanding with low-level electronic control:
@@ -79,7 +89,7 @@ The system is designed as a modular pipeline that bridges high-level natural lan
 
 ---
 
-## 3. Benchmark Results
+## 4. Benchmark Results
 
 The system's performance was evaluated through a specialized benchmarking suite (`benchmark.py`) that measures latency, throughput, and hardware resource utilization.
 
@@ -98,6 +108,6 @@ The following chart summarizes the benchmark results for the Qwen-0.5B model on 
 
 ---
 
-## 4. Statement of Work
+## 5. Statement of Work
 
 All architecture design, hardware setup, implementation, and performance evaluation were performed independently by **Haochen Zhao** with the assistance of AI tools. 
